@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HeiController {
     @GetMapping("/")
     public String hei(String navn) {
-        return "Hei verden" + navn + "!";
+        int lengde = navn.length();
+        return "Hei verden" + navn + "! Navnet ditt har "+lengde+" bokstaver.";
     }
 }
